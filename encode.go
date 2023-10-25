@@ -6,6 +6,8 @@ import (
 	"github.com/vuuvv/errors"
 )
 
+var Marshal = sonic.Marshal
+
 func Stringify(value any) (string, error) {
 	switch val := value.(type) {
 	case string:

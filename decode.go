@@ -5,6 +5,8 @@ import (
 	"github.com/vuuvv/errors"
 )
 
+var Unmarshal = sonic.Unmarshal
+
 func Parse[T any](json string) (*T, error) {
 	return ParseBytes[T](S2B(json))
 }
