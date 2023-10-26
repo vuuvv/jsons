@@ -50,7 +50,7 @@ func (i *Int64) ToInt64() int64 {
 }
 
 func (i *Int64) MarshalJSON() ([]byte, error) {
-	return S2B(strconv.FormatInt(i.int64, 10)), nil
+	return S2B(`"` + strconv.FormatInt(i.int64, 10) + `"`), nil
 }
 
 func (i *Int64) UnmarshalJSON(bs []byte) (err error) {
