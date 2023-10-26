@@ -85,7 +85,7 @@ func (d *DateTime) ToTime() time.Time {
 }
 
 func (d *DateTime) MarshalJSON() ([]byte, error) {
-	return S2B(d.Format("2006-01-02 15:04:05")), nil
+	return S2B(`"` + d.Format("2006-01-02 15:04:05") + `"`), nil
 }
 
 func (d *DateTime) UnmarshalJSON(bs []byte) error {
